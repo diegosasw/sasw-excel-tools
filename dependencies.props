@@ -1,0 +1,26 @@
+<Project>
+	<PropertyGroup Label="SDK Versions">
+		<NetStandardTargetVersion>netstandard2.1</NetStandardTargetVersion>
+		<NetCoreTargetVersion>netcoreapp3.0</NetCoreTargetVersion>
+		<NetTestSdk>16.4.0</NetTestSdk>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Label="Package Information">
+		<Authors>Diego Martin</Authors>
+		<Company>Sunny Attic Software</Company>
+		<PackageTags>Sunny Attic Software</PackageTags>
+	</PropertyGroup>
+
+	<PropertyGroup Label="Package Versions">
+    <Moq>4.13.1</Moq>
+		<FluentAssertions>5.9.0</FluentAssertions>
+		<XUnit>2.4.1</XUnit>
+		<XUnitRunnerVisualStudio>2.4.1</XUnitRunnerVisualStudio>
+		<CoverletCollector>1.1.0</CoverletCollector>
+	</PropertyGroup>
+
+	<PropertyGroup Label="Sasw Versions">
+		<SaswTestSupport>1.0.1</SaswTestSupport>
+	</PropertyGroup>
+</Project>

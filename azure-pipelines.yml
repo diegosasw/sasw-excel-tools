@@ -1,0 +1,69 @@
+trigger:
+- master
+- feature/*
+
+pool:
+  vmImage: ubuntu-18.04
+
+variables:
+  - group: sasw-common-variables
+  - name: NUGET_FOLDER_NAME
+    value: nupkgs
+  - name: PIPELINE_ARTIFACT_NAME
+    value: $(Build.BuildNumber)
+  - name: PATH_PIPELINE_ARTIFACT_NAME
+    value: $(Pipeline.Workspace)/$(PIPELINE_ARTIFACT_NAME)
+  - name: NUGET_API_KEY
+    value: $(nuget-api-key)
+  - name: NUGET_FEED
+    value: $(nuget-feed)
+  - name: PRERELEASE_SUFFIX
+    value: $(nuget-prerelease-suffix)
+
+stages:
+  - stage:
+    displayName: 'Build'
+    jobs:
+      - job: 'Build'
+        displayName: 'Build & Create nuGet Package'
+        steps:
+          - task: NuGetAuthenticate@0
+            displayName: 'Authenticate in NuGet feed'
+          - script: dotnet restore --no-cache --force
+            displayName: 'Restore dependencies'
+          - script: dotnet build --configuration Release --no-restore
+            displayName: 'Build with Release Configuration'
+          - script: dotnet vstest test/*UnitTests/bin/Release/**/*UnitTests.dll
+            displayName: 'Run unit tests'
+          - script: dotnet pack *.sln --configuration Release --output $(NUGET_FOLDER_NAME)
+            condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+            displayName: 'Create release nuGet'
+          - script: dotnet pack *.sln --configuration Release --output $(NUGET_FOLDER_NAME) --version-suffix $(PRERELEASE_SUFFIX) --include-source --include-symbols -p:SymbolPackageFormat=snupkg
+            condition: and(succeeded(), ne(variables['Build.SourceBranch'], 'refs/heads/master'))
+            displayName: 'Create pre-release nuGet'
+          - publish: $(System.DefaultWorkingDirectory)/$(NUGET_FOLDER_NAME)
+            artifact: $(PIPELINE_ARTIFACT_NAME)
+            displayName: 'Publish pipeline artifact'
+  - stage:
+    displayName: 'Release'
+    condition: succeeded()
+    jobs:
+      - job: 'Publish'
+        displayName: 'Publish nuGet Package'
+        steps:
+          - download: current
+            artifact: $(PIPELINE_ARTIFACT_NAME)
+            displayName: 'Download pipeline artifact'
+          - script: ls $(PATH_PIPELINE_ARTIFACT_NAME)
+            displayName: 'Display contents of downloaded articacts path'
+          - task: NuGetAuthenticate@0
+            displayName: 'Authenticate in NuGet feed'
+          - task: UseDotNet@2
+            displayName: 'Use latest .NET Core sdk 3.x'
+            inputs:
+              packageType: sdk
+              version: 3.x
+              includePreviewVersions: true
+              installationPath: $(Agent.ToolsDirectory)/dotnet
+          - script: dotnet nuget push $(PATH_PIPELINE_ARTIFACT_NAME)/**/*.nupkg --source $(NUGET_FEED) --api-key $(NUGET_API_KEY) --skip-duplicate
+            displayName: 'Uploads nuGet packages'
