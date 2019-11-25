@@ -20,6 +20,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sasw.ExcelTools", "src\Sasw
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sasw.ExcelTools.UnitTests", "test\Sasw.ExcelTools.UnitTests\Sasw.ExcelTools.UnitTests.csproj", "{F751F44E-5CF9-478A-8308-493435B59A0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sasw.ExcelTools.DependencyInjection", "src\Sasw.ExcelTools.DependencyInjection\Sasw.ExcelTools.DependencyInjection.csproj", "{36D3744B-EC2C-4986-8CD0-617D0F6FDC14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "integration", "integration", "{CCAFD04F-DC9C-4A40-B9C6-64AD31F2DCD9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sasw.ExcelTools.DependencyInjection.IntegrationTests", "test\Sasw.ExcelTools.DependencyInjection.IntegrationTests\Sasw.ExcelTools.DependencyInjection.IntegrationTests.csproj", "{9495528D-1A0B-4873-AFE4-0C3511665831}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +40,14 @@ Global
 		{F751F44E-5CF9-478A-8308-493435B59A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F751F44E-5CF9-478A-8308-493435B59A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F751F44E-5CF9-478A-8308-493435B59A0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36D3744B-EC2C-4986-8CD0-617D0F6FDC14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36D3744B-EC2C-4986-8CD0-617D0F6FDC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36D3744B-EC2C-4986-8CD0-617D0F6FDC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36D3744B-EC2C-4986-8CD0-617D0F6FDC14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9495528D-1A0B-4873-AFE4-0C3511665831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9495528D-1A0B-4873-AFE4-0C3511665831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9495528D-1A0B-4873-AFE4-0C3511665831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9495528D-1A0B-4873-AFE4-0C3511665831}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +56,9 @@ Global
 		{F0EFBA78-FD8D-44AF-A81F-F7E979A76492} = {F0C5D0CF-C76B-4ACC-A58A-39B74849A111}
 		{42910AB6-BDC2-4058-BFDD-335B839C518F} = {58D7D1FF-5F07-460B-BFCC-3EB0BA3C0658}
 		{F751F44E-5CF9-478A-8308-493435B59A0E} = {F0EFBA78-FD8D-44AF-A81F-F7E979A76492}
+		{36D3744B-EC2C-4986-8CD0-617D0F6FDC14} = {58D7D1FF-5F07-460B-BFCC-3EB0BA3C0658}
+		{CCAFD04F-DC9C-4A40-B9C6-64AD31F2DCD9} = {F0C5D0CF-C76B-4ACC-A58A-39B74849A111}
+		{9495528D-1A0B-4873-AFE4-0C3511665831} = {CCAFD04F-DC9C-4A40-B9C6-64AD31F2DCD9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0817C2E9-71F7-4227-B8A0-232715BF322F}

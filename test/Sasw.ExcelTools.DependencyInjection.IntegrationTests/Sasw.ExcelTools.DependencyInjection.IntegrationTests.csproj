@@ -16,11 +16,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Sasw.ExcelTools\Sasw.ExcelTools.csproj" />
+    <ProjectReference Include="..\..\src\Sasw.ExcelTools.DependencyInjection\Sasw.ExcelTools.DependencyInjection.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="TestSupport\Samples\test.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="test.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

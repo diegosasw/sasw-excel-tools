@@ -1,11 +1,11 @@
-﻿namespace Sasw.ExcelTools
+﻿namespace Sasw.ExcelTools.Converters
 {
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Text;
     using System.Threading.Tasks;
-    using Contracts;
+    using Contracts.Converters;
     using ExcelDataReader;
     using Exceptions;
 

@@ -1,8 +1,9 @@
-﻿namespace Sasw.ExcelTools.UnitTests.ExcelConverterTests
+﻿namespace Sasw.ExcelTools.UnitTests.Converters.ExcelConverterTests
 {
     using System;
     using System.IO;
     using System.Threading.Tasks;
+    using ExcelTools.Converters;
     using FluentAssertions;
     using TestSupport;
     using Xunit;
