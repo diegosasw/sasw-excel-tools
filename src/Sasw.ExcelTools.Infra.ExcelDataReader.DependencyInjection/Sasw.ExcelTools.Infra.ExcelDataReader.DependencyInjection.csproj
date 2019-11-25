@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>$(NetStandardTargetVersion)</TargetFramework>
     <VersionPrefix>1.0.0</VersionPrefix>
-    <Description>Dependency Injection extensions to register excel tools</Description>
+    <Description>Excel Tools Dependency Injection extensions</Description>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Sasw.ExcelTools\Sasw.ExcelTools.csproj" />
+    <ProjectReference Include="..\Sasw.ExcelTools.Infra.ExcelDataReader\Sasw.ExcelTools.Infra.ExcelDataReader.csproj" />
   </ItemGroup>
 
 </Project>

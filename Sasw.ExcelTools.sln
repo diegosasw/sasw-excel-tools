@@ -16,15 +16,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit", "unit", "{F0EFBA78-FD8D-44AF-A81F-F7E979A76492}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sasw.ExcelTools", "src\Sasw.ExcelTools\Sasw.ExcelTools.csproj", "{42910AB6-BDC2-4058-BFDD-335B839C518F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sasw.ExcelTools.UnitTests", "test\Sasw.ExcelTools.UnitTests\Sasw.ExcelTools.UnitTests.csproj", "{F751F44E-5CF9-478A-8308-493435B59A0E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sasw.ExcelTools.DependencyInjection", "src\Sasw.ExcelTools.DependencyInjection\Sasw.ExcelTools.DependencyInjection.csproj", "{36D3744B-EC2C-4986-8CD0-617D0F6FDC14}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "integration", "integration", "{CCAFD04F-DC9C-4A40-B9C6-64AD31F2DCD9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sasw.ExcelTools.DependencyInjection.IntegrationTests", "test\Sasw.ExcelTools.DependencyInjection.IntegrationTests\Sasw.ExcelTools.DependencyInjection.IntegrationTests.csproj", "{9495528D-1A0B-4873-AFE4-0C3511665831}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sasw.ExcelTools", "src\Sasw.ExcelTools\Sasw.ExcelTools.csproj", "{84703222-50D9-44B9-88D4-72F392D3E53B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sasw.ExcelTools.Infra.ExcelDataReader", "src\Sasw.ExcelTools.Infra.ExcelDataReader\Sasw.ExcelTools.Infra.ExcelDataReader.csproj", "{9F6510CA-AB44-41D9-B635-33B95C229B06}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sasw.ExcelTools.Infra.ExcelDataReader.UnitTests", "test\Sasw.ExcelTools.Infra.ExcelDataReader.UnitTests\Sasw.ExcelTools.Infra.ExcelDataReader.UnitTests.csproj", "{9526DD7E-EDB4-448F-A62F-A5FF20D43D41}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sasw.ExcelTools.Infra.ExcelDataReader.DependencyInjection.IntegrationTests", "test\Sasw.ExcelTools.Infra.ExcelDataReader.DependencyInjection.IntegrationTests\Sasw.ExcelTools.Infra.ExcelDataReader.DependencyInjection.IntegrationTests.csproj", "{2F3E4F42-98F3-4A8D-BC7A-36DA1F7AD016}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sasw.ExcelTools.Infra.ExcelDataReader.DependencyInjection", "src\Sasw.ExcelTools.Infra.ExcelDataReader.DependencyInjection\Sasw.ExcelTools.Infra.ExcelDataReader.DependencyInjection.csproj", "{D4D45AB0-971E-4657-972C-F0612FA437ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,33 +34,38 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{42910AB6-BDC2-4058-BFDD-335B839C518F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42910AB6-BDC2-4058-BFDD-335B839C518F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42910AB6-BDC2-4058-BFDD-335B839C518F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42910AB6-BDC2-4058-BFDD-335B839C518F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F751F44E-5CF9-478A-8308-493435B59A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F751F44E-5CF9-478A-8308-493435B59A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F751F44E-5CF9-478A-8308-493435B59A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F751F44E-5CF9-478A-8308-493435B59A0E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36D3744B-EC2C-4986-8CD0-617D0F6FDC14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36D3744B-EC2C-4986-8CD0-617D0F6FDC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36D3744B-EC2C-4986-8CD0-617D0F6FDC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36D3744B-EC2C-4986-8CD0-617D0F6FDC14}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9495528D-1A0B-4873-AFE4-0C3511665831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9495528D-1A0B-4873-AFE4-0C3511665831}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9495528D-1A0B-4873-AFE4-0C3511665831}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9495528D-1A0B-4873-AFE4-0C3511665831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84703222-50D9-44B9-88D4-72F392D3E53B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84703222-50D9-44B9-88D4-72F392D3E53B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84703222-50D9-44B9-88D4-72F392D3E53B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84703222-50D9-44B9-88D4-72F392D3E53B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F6510CA-AB44-41D9-B635-33B95C229B06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F6510CA-AB44-41D9-B635-33B95C229B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F6510CA-AB44-41D9-B635-33B95C229B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F6510CA-AB44-41D9-B635-33B95C229B06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9526DD7E-EDB4-448F-A62F-A5FF20D43D41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9526DD7E-EDB4-448F-A62F-A5FF20D43D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9526DD7E-EDB4-448F-A62F-A5FF20D43D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9526DD7E-EDB4-448F-A62F-A5FF20D43D41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F3E4F42-98F3-4A8D-BC7A-36DA1F7AD016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F3E4F42-98F3-4A8D-BC7A-36DA1F7AD016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F3E4F42-98F3-4A8D-BC7A-36DA1F7AD016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F3E4F42-98F3-4A8D-BC7A-36DA1F7AD016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D45AB0-971E-4657-972C-F0612FA437ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D45AB0-971E-4657-972C-F0612FA437ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D45AB0-971E-4657-972C-F0612FA437ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D45AB0-971E-4657-972C-F0612FA437ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F0EFBA78-FD8D-44AF-A81F-F7E979A76492} = {F0C5D0CF-C76B-4ACC-A58A-39B74849A111}
-		{42910AB6-BDC2-4058-BFDD-335B839C518F} = {58D7D1FF-5F07-460B-BFCC-3EB0BA3C0658}
-		{F751F44E-5CF9-478A-8308-493435B59A0E} = {F0EFBA78-FD8D-44AF-A81F-F7E979A76492}
-		{36D3744B-EC2C-4986-8CD0-617D0F6FDC14} = {58D7D1FF-5F07-460B-BFCC-3EB0BA3C0658}
 		{CCAFD04F-DC9C-4A40-B9C6-64AD31F2DCD9} = {F0C5D0CF-C76B-4ACC-A58A-39B74849A111}
-		{9495528D-1A0B-4873-AFE4-0C3511665831} = {CCAFD04F-DC9C-4A40-B9C6-64AD31F2DCD9}
+		{84703222-50D9-44B9-88D4-72F392D3E53B} = {58D7D1FF-5F07-460B-BFCC-3EB0BA3C0658}
+		{9F6510CA-AB44-41D9-B635-33B95C229B06} = {58D7D1FF-5F07-460B-BFCC-3EB0BA3C0658}
+		{9526DD7E-EDB4-448F-A62F-A5FF20D43D41} = {F0EFBA78-FD8D-44AF-A81F-F7E979A76492}
+		{2F3E4F42-98F3-4A8D-BC7A-36DA1F7AD016} = {CCAFD04F-DC9C-4A40-B9C6-64AD31F2DCD9}
+		{D4D45AB0-971E-4657-972C-F0612FA437ED} = {58D7D1FF-5F07-460B-BFCC-3EB0BA3C0658}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0817C2E9-71F7-4227-B8A0-232715BF322F}

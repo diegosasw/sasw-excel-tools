@@ -1,4 +1,4 @@
-﻿namespace Sasw.ExcelTools.Contracts.Converters
+﻿namespace Sasw.ExcelTools.Converters
 {
     using System.IO;
     using System.Threading.Tasks;

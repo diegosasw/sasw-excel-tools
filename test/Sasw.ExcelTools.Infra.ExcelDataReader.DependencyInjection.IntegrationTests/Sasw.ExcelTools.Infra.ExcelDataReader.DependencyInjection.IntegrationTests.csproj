@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Sasw.ExcelTools.DependencyInjection\Sasw.ExcelTools.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\src\Sasw.ExcelTools.Infra.ExcelDataReader.DependencyInjection\Sasw.ExcelTools.Infra.ExcelDataReader.DependencyInjection.csproj" />
   </ItemGroup>
 
   <ItemGroup>

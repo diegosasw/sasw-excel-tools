@@ -1,8 +1,7 @@
-﻿namespace Sasw.ExcelTools.DependencyInjection
+﻿namespace Sasw.ExcelTools.Infra.ExcelDataReader.DependencyInjection
 {
-    using Contracts;
-    using Contracts.Converters;
     using Converters;
+    using ExcelTools.Converters;
     using Microsoft.Extensions.DependencyInjection;
 
     public static class RegistrationExtensions

@@ -1,10 +1,10 @@
-﻿namespace Sasw.ExcelTools.UnitTests.Converters.ExcelConverterTests
+﻿namespace Sasw.ExcelTools.Infra.ExcelDataReader.UnitTests.Converters.ExcelConverterTests
 {
+    using ExcelDataReader.Converters;
+    using FluentAssertions;
     using System;
     using System.IO;
     using System.Threading.Tasks;
-    using ExcelTools.Converters;
-    using FluentAssertions;
     using TestSupport;
     using Xunit;
 

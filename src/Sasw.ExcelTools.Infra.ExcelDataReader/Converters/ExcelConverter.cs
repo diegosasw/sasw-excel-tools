@@ -1,13 +1,13 @@
-﻿namespace Sasw.ExcelTools.Converters
+﻿namespace Sasw.ExcelTools.Infra.ExcelDataReader.Converters
 {
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Text;
     using System.Threading.Tasks;
-    using Contracts.Converters;
-    using ExcelDataReader;
+    using ExcelTools.Converters;
     using Exceptions;
+    using global::ExcelDataReader;
 
     public class ExcelConverter
         : IExcelConverter

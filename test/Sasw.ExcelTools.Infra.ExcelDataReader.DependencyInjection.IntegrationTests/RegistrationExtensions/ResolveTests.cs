@@ -1,11 +1,10 @@
-﻿namespace Sasw.ExcelTools.DependencyInjection.IntegrationTests.RegistrationExtensions
+﻿namespace Sasw.ExcelTools.Infra.ExcelDataReader.DependencyInjection.IntegrationTests.RegistrationExtensions
 {
-    using Contracts;
+    using Converters;
+    using ExcelTools.Converters;
     using FluentAssertions;
     using Microsoft.Extensions.DependencyInjection;
     using System;
-    using Contracts.Converters;
-    using Converters;
     using TestSupport;
     using Xunit;
 

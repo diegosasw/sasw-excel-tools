@@ -1,4 +1,4 @@
-﻿namespace Sasw.ExcelTools.Exceptions
+﻿namespace Sasw.ExcelTools.Infra.ExcelDataReader.Exceptions
 {
     using System;
 
