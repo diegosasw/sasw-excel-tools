@@ -2,8 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>$(NetStandardTargetVersion)</TargetFramework>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <Description>Excel Tools contracts</Description>
+    <Title>$(AssemblyName)</Title>
+    <Description>Excel Tools Contracts</Description>
+    <ProjectUrl>$(Web)</ProjectUrl>
+    <Authors>$(Authors)</Authors>
+    <VersionPrefix>$(PackageVersion)</VersionPrefix>
+    <PackageLicenseExpression>$(License)</PackageLicenseExpression>
+    <PackageProjectUrl>$(Web)</PackageProjectUrl>
+    <NeutralLanguage>$(Language)</NeutralLanguage>
   </PropertyGroup>
 
 </Project>

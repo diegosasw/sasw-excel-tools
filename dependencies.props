@@ -1,7 +1,7 @@
 <Project>
 	<PropertyGroup Label="SDK Versions">
 		<NetStandardTargetVersion>netstandard2.1</NetStandardTargetVersion>
-		<NetCoreTargetVersion>netcoreapp3.0</NetCoreTargetVersion>
+		<NetCoreTargetVersion>netcoreapp3.1</NetCoreTargetVersion>
 		<NetTestSdk>16.4.0</NetTestSdk>
 		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
@@ -9,11 +9,15 @@
 	<PropertyGroup Label="Package Information">
 		<Authors>Diego Martin</Authors>
 		<Company>Sunny Attic Software</Company>
-		<PackageTags>Sunny Attic Software</PackageTags>
+		<Web>https://sunnyatticsoftware.com</Web>
+		<PackageTags>SunnyAtticSoftware;Excel;Csv;Converter</PackageTags>
+		<License>MIT</License>
+		<Language>en</Language>
+		<PackageVersion>0.1.0</PackageVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Label="Package Versions">
-    <Moq>4.13.1</Moq>
+		<Moq>4.13.1</Moq>
 		<FluentAssertions>5.9.0</FluentAssertions>
 		<XUnit>2.4.1</XUnit>
 		<XUnitRunnerVisualStudio>2.4.1</XUnitRunnerVisualStudio>

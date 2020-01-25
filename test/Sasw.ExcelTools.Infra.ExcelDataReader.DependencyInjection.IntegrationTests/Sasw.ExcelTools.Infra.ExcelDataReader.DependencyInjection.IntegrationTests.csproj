@@ -6,13 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentAssertions" Version="$(FluentAssertions)" />
+    <PackageReference Include="FluentAssertions" Version="5.10.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(NetTestSdk)" />
     <PackageReference Include="Moq" Version="$(Moq)" />
     <PackageReference Include="xunit" Version="$(XUnit)" />
     <PackageReference Include="xunit.runner.visualstudio" Version="$(XUnitRunnerVisualStudio)" />
-    <PackageReference Include="coverlet.collector" Version="$(CoverletCollector)" />
-    <PackageReference Include="Sasw.TestSupport" Version="$(SaswTestSupport)" />
+    <PackageReference Include="coverlet.collector" Version="1.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Sasw.TestSupport" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>

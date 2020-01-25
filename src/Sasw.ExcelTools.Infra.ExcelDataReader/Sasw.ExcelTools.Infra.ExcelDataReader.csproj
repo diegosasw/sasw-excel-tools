@@ -2,14 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>$(NetStandardTargetVersion)</TargetFramework>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <Description>Excel Tools implementation with ExcelDataReader</Description>
+    <Title>$(AssemblyName)</Title>
+    <Description>Excel Tools Implementation</Description>
+    <ProjectUrl>$(Web)</ProjectUrl>
+    <Authors>$(Authors)</Authors>
+    <VersionPrefix>$(PackageVersion)</VersionPrefix>
+    <PackageLicenseExpression>$(License)</PackageLicenseExpression>
+    <PackageProjectUrl>$(Web)</PackageProjectUrl>
+    <NeutralLanguage>$(Language)</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="ExcelDataReader" Version="3.6.0" />
     <PackageReference Include="ExcelDataReader.DataSet" Version="3.6.0" />
-    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.6.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.7.0" />
   </ItemGroup>
 
   <ItemGroup>
