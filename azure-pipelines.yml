@@ -38,10 +38,10 @@ stages:
             displayName: 'Restore dependencies'
           - script: dotnet build --configuration Release --no-restore
             displayName: 'Build with Release Configuration'
-#          - script: dotnet vstest test/*UnitTests/bin/Release/**/*UnitTests.dll
-#            displayName: 'Run unit tests'
-#          - script: dotnet vstest test/*IntegrationTests/bin/Release/**/*IntegrationTests.dll
-#            displayName: 'Run integration tests'
+          - script: dotnet vstest test/*UnitTests/bin/Release/**/*UnitTests.dll
+            displayName: 'Run unit tests'
+          - script: dotnet vstest test/*IntegrationTests/bin/Release/**/*IntegrationTests.dll
+            displayName: 'Run integration tests'
           - script: dotnet pack *.sln --configuration Release --output $(NUGET_FOLDER_NAME) --include-symbols -p:SymbolPackageFormat=snupkg
             condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
             displayName: 'Create release nuGet'
